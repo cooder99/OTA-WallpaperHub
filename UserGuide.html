@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WallpaperHub | User Guide</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .activity-box {
+        background-color: #181818;
+        border: 1px solid #383838;
+        border-top: 3px solid #7d0606;
+        padding: 25px;
+        margin-top: 25px;
+        text-align: left;
+      }
+      .activity-box h2 {
+        color: #ffffff;
+        margin-bottom: 10px;
+      }
+      fieldset {
+        padding: 15px;
+        border-color: #383838;
+        margin-bottom: 15px;
+      }
+      legend {
+        color: #ff4d4d;
+        font-weight: bold;
+        padding: 0 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="https://ibb.co/7xf2qbXx"
+          ><img
+            src="https://i.ibb.co/V012s3t0/OTA-removebg-preview.png"
+            alt="OTA-removebg-preview"
+            border="0"
+        /></a>
+        <h1>WallpaperHub</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us &amp; Reviews</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="UserGuide.html">User Guide</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <section class="hero">
+        <h2 style="letter-spacing: 1px">User Guide &amp; Resource Hub</h2>
+        <p>
+          Welcome to the Wallpaper Hub User Guide! This guide will help you
+          navigate our website, download wallpapers, and troubleshoot common
+          issues.
+        </p>
+      </section>
+
+      <section class="featured">
+        <h2>How to Use Wallpaper Hub</h2>
+        <div class="cards-container">
+          <div class="info-card">
+            <h3>Browsing Wallpapers</h3>
+            <p>
+              Navigate to the Gallery page to explore our collection of
+              high-resolution wallpapers. You can browse by category and
+              resolution.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>Downloading Wallpapers</h3>
+            <p>
+              Click on a wallpaper to view it in full size. Use the "View &amp;
+              Download" link to save it to your device. All downloads are free.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>Setting Live Wallpapers</h3>
+            <p>
+              For animated wallpapers, ensure you have
+              <a
+                href="https://www.rocksdanister.com/lively/"
+                target="_blank"
+                class="social-links"
+                >Lively Wallpaper</a
+              >
+              installed. Follow the instructions provided to set it as your
+              background.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured">
+        <h2>Troubleshooting</h2>
+        <div class="cards-container">
+          <div class="info-card">
+            <h3>Common Issues</h3>
+            <p>
+              If you encounter problems with downloading or setting wallpapers,
+              check your internet connection and ensure your graphics drivers
+              are up to date.
+            </p>
+          </div>
+          <div class="info-card">
+            <h3>Contact Support</h3>
+            <p>
+              If you need further assistance, please reach out to our support
+              team via the
+              <a href="contact.html" class="social-links">Contact Us</a> page.
+              We're here to help!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="activity-box">
+        <h2>Interactive Wallpaper Preference Finder</h2>
+        <p>
+          Select your device and preferred resolution to get tailored wallpaper
+          recommendations:
+        </p>
+        <br />
+        <form action="gallery.html" method="get">
+          <fieldset>
+            <legend>Quick Screen Setup Quiz</legend>
+            <p><strong>1. Device Type:</strong></p>
+            <input type="radio" name="device" value="desktop" checked /> Desktop
+            / Laptop<br />
+            <input type="radio" name="device" value="mobile" />
+            Smartphone<br /><br />
+
+            <p><strong>2. Preferred Style:</strong></p>
+            <input type="checkbox" name="style" value="animated" /> Animated
+            (GIF / MP4)<br />
+            <input type="checkbox" name="style" value="static" /> Static 4K
+            Photography<br /><br />
+
+            <input
+              type="submit"
+              value="Go to Gallery"
+              style="
+                background-color: #7d0606;
+                color: #ffffff;
+                font-weight: bold;
+                padding: 10px 18px;
+                border: none;
+                cursor: pointer;
+              "
+            />
+          </fieldset>
+        </form>
+      </section>
+    </div>
+
+    <footer>
+      <p>
+        All rights reserved &copy; 2026 - Wallpaper Hub Team (Applied Science
+        Private University)
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WallpaperHub | Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <a href="https://ibb.co/7xf2qbXx"><img src="https://i.ibb.co/V012s3t0/OTA-removebg-preview.png"
+          alt="OTA-removebg-preview" border="0" /></a>
+      <h1>WallpaperHub</h1>
+    </div>
+    <ul class="ul1">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About Us &amp; Reviews</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="UserGuide.html">User Guide</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <section class="hero">
+      <h2>Transform Your Screen Into A Work Of Art</h2>
+      <p>
+        Discover and download thousands of animated and static wallpapers in
+        4K resolution for computers and smartphones completely free.
+      </p>
+      <a href="gallery.html" class="btn">Explore Wallpapers Now</a>
+    </section>
+
+    <section class="featured">
+      <h2>Latest Added Wallpapers</h2>
+
+      <div class="cards-container">
+        <div class="wallpaper-card">
+          <figure>
+            <img
+              src="https://media.giphy.com/media/mdfPpglf2c0QxED151/giphy.gif"
+              alt="Sonic Speed Run GIF" width="290" height="165" />
+            <figcaption>Animated GIF | Gaming</figcaption>
+          </figure>
+          <h3>Sonic Speed Run</h3>
+          <p>Sonic running super fast in a classic video game.</p>
+          <a href="https://media.giphy.com/media/mdfPpglf2c0QxED151/giphy.gif"
+            onclick="downloadImage(this.href, 'sonic-speed-run.gif', event)"
+            class="download-link">Download Free</a>
+        </div>
+
+        <div class="wallpaper-card">
+          <figure>
+            <img
+              src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif"
+              alt="Fast Typing Cat GIF" width="290" height="165" />
+            <figcaption>Animated GIF | Memes</figcaption>
+          </figure>
+          <h3>Fast Typing Cat</h3>
+          <p>A funny cat typing very fast on a laptop keyboard.</p>
+          <a href="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif"
+            onclick="downloadImage(this.href, 'fast-typing-cat.gif', event)"
+            class="download-link">Download Free</a>
+        </div>
+
+        <div class="wallpaper-card">
+          <figure>
+            <img
+              src="https://media.giphy.com/media/12WEBZaeMLsMnu/giphy.gif"
+              alt="Fast Drift Car GIF" width="290" height="165" />
+            <figcaption>Animated GIF | Cars</figcaption>
+          </figure>
+          <h3>Fast Drift Car</h3>
+          <p>A cool sports car drifting fast on the street.</p>
+          <a href="https://media.giphy.com/media/12WEBZaeMLsMnu/giphy.gif"
+            onclick="downloadImage(this.href, 'fast-drift-car.gif', event)"
+            class="download-link">Download Free</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>
+      All rights reserved &copy; 2026 - Wallpaper Hub Team (Applied Science
+      Private University)
+    </p>
+  </footer>
+  <script>
+    async function downloadImage(url, filename, event) {
+      event.preventDefault();
+      try {
+        const response = await fetch(url);
+        if (!response.ok) throw new Error("Download failed");
+        const blob = await response.blob();
+        const blobUrl = window.URL.createObjectURL(blob);
+        const link = document.createElement("a");
+        link.href = blobUrl;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        window.URL.revokeObjectURL(blobUrl);
+      } catch (error) {
+        window.open(url, "_blank");
+      }
+    }
+  </script>
+</body>
+
+</html>
